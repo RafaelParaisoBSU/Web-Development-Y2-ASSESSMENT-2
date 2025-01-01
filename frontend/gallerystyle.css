@@ -1,0 +1,225 @@
+:root {
+  --color-1: black;
+  --text-color: white;
+  --accent-color: goldenrod;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-1);
+  overflow: hidden;
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav {
+  height: 60px;
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 2px solid goldenrod;
+}
+nav img {
+  width: 120px;
+  padding-inline: 20px;
+  margin-right: auto;
+}
+nav a {
+  font-size: 24px;
+  font-family: "Bebas Neue";
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+  background-color: var(--accent-color);
+}
+nav svg {
+  fill: var(--text-color);
+}
+nav .gallery {
+  margin-left: auto;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  cursor: pointer;
+  display: none;
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins";
+}
+
+.slide-titles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300vw;
+  height: 100vh;
+  display: flex;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.title {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bolder;
+  color: grey;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.active h1 {
+  color: white;
+  border-bottom: 10px solid gold;
+  transition: all 0.7s ease;
+}
+
+.slide-images {
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+.img-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(85% 0%, 0% 0%, 0% 50%, 85% 50%);
+          clip-path: polygon(85% 0%, 0% 0%, 0% 50%, 85% 50%);
+  transition: -webkit-clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-top: 10px solid gold;
+}
+
+.img-bottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 50%, 15% 50%, 15% 100%, 100% 100%);
+          clip-path: polygon(100% 50%, 15% 50%, 15% 100%, 100% 100%);
+  transition: -webkit-clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.slide-images:hover .img-top {
+  -webkit-clip-path: polygon(90% 0%, 10% 0%, 10% 50%, 90% 50%);
+          clip-path: polygon(90% 0%, 10% 0%, 10% 50%, 90% 50%);
+}
+
+.slide-images:hover .img-bottom {
+  -webkit-clip-path: polygon(90% 50%, 10% 50%, 10% 100%, 90% 100%);
+          clip-path: polygon(90% 50%, 10% 50%, 10% 100%, 90% 100%);
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-1);
+    transition: 0.75s ease-out;
+  }
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    border-bottom: 2px solid goldenrod;
+  }
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+  }
+  .slide-images {
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+  }
+  .img-top,
+  .img-bottom {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .slide-images:hover .img-top,
+  .slide-images:hover .img-bottom {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .title h1 {
+    opacity: 0;
+    font-size: 48px;
+  }
+  .active h1 {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=gallerystyle.css.map */

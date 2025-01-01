@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Geographic</title>
+    <link rel="stylesheet" href="gallerystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <img src="./assets/logo.png" alt="">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </label>
+
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
+                    fill="#e8eaed">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </label>
+            <a href="home.html">Home</a>
+            <a href="loginpage.html">Login</a>
+            <a href="gallery.html" class="gallery">Gallery</a>
+            <a href="home.html#animals">Animals</a>
+            <a href="home.html#environment">Environment</a>
+            <a href="home.html#history-culture">History</a>
+            <a href="home.html#science">Science</a>
+            <a href="home.html#travel">Travel</a>
+        </div>
+    </nav>
+    <main id="main-content">
+        <div class="slider">
+            <div class="slide-titles">
+                <div class="title">
+                    <h1>Flamingo-land</h1>
+                </div>
+                <div class="title">
+                    <h1>King of the Jungle</h1>
+                </div>
+                <div class="title">
+                    <h1>Guardian of the Ocean</h1>
+                </div>
+                <div class="title">
+                    <h1>Purple Sky</h1>
+                </div>
+                <div class="title">
+                    <h1>Aqua Man</h1>
+                </div>
+                <div class="title">
+                    <h1>Happy Feet</h1>
+                </div>
+                <div class="title">
+                    <h1>The Fastest Mammal</h1>
+                </div>
+                <div class="title">
+                    <h1>Flamingo-land</h1>
+                </div>
+                <div class="title">
+                    <h1>King of the Jungle</h1>
+                </div>
+            </div>
+            <div class="slide-images">
+                <div class="img-top"></div>
+                <div class="img-bottom"></div>
+            </div>
+        </div>
+    </main>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="./script.js"></script>
+        <script src="./slider.js"></script>
+</body>
+
+</html>
