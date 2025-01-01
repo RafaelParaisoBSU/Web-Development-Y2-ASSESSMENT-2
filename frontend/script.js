@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ScrollReveal functionality
     ScrollReveal({
-        reset: true,
+        reset: false,
         distance: '40px',
         duration: 2500,
         delay: 400
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ScrollReveal().reveal('.animal', { delay: 200 });
     ScrollReveal().reveal('.animalstext', { delay: 200 });
     ScrollReveal().reveal('#environment', { delay: 200 });
-    ScrollReveal().reveal('.envarticles',);
+    ScrollReveal().reveal('.envarticles', { delay: 200 });
 });
 
 // Signup Functionality

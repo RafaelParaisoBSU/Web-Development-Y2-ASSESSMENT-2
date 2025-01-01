@@ -250,11 +250,13 @@ nav {
 
         h2 {
             font-size: 24px;
+            font-family: "League Spartan";
             margin: 0;
         }
 
         h1 {
             font-size: 36px;
+            font-family: "League Spartan";
             margin: 10px 0 0;
         }
     }
@@ -362,7 +364,7 @@ nav {
         p {
             margin-top: 25px;
             margin-inline: 50px;
-            font-size: 16px;
+            font-size: 32px;
         }
 
         button {
@@ -371,16 +373,22 @@ nav {
     }
 
     .animalscontent {
-        padding: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 1fr);
+        padding: 20px;
 
         .animalstext {
+            padding: 20px;
+            grid-column-start: 1;
+            grid-row-start: 1;
 
             h1 {
-                font-size: 64px;
+                font-size: 96px;
+                text-align: center;
             }
 
             p {
-                font-size: 16px;
+                font-size: 32px;
             }
         }
     }
@@ -390,13 +398,13 @@ nav {
     }
 
     .environmenttext {
-
         h1 {
-            font-size: 92px;
+            font-size:96px;
         }
 
         p {
-            font-size: 36px;
+            font-size: 32px;
+            text-align: justify;
         }
     }
 
@@ -417,6 +425,7 @@ nav {
 
         h1 {
             font-size: 32px;
+            
         }
     }
 }
@@ -460,24 +469,14 @@ nav {
     }
 
     .animalscontent {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 1fr);
-        padding: 20px;
-
+    
         .animalstext {
-            padding: 20px;
-            grid-column-start: 1;
-            grid-row-start: 1;
-
             h1 {
-                font-size: 128px;
-                border-bottom: 10px solid gold;
-                margin-bottom: 20px;
-                text-align: center;
+                font-size: 64px;
             }
 
             p {
-                font-size: 24px;
+                font-size: 18px;
                 text-align: justify;
             }
         }
@@ -495,7 +494,8 @@ nav {
         }
 
         p {
-            font-size: 32px;
+            font-size: 18px;
+            text-align: justify;
         }
     }
 }

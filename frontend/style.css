@@ -230,10 +230,12 @@ nav .gallery {
 }
 .envarticle1 .articletext h2 {
   font-size: 24px;
+  font-family: "League Spartan";
   margin: 0;
 }
 .envarticle1 .articletext h1 {
   font-size: 36px;
+  font-family: "League Spartan";
   margin: 10px 0 0;
 }
 
@@ -329,28 +331,37 @@ nav .gallery {
   .homecontent p {
     margin-top: 25px;
     margin-inline: 50px;
-    font-size: 16px;
+    font-size: 32px;
   }
   .homecontent button {
     margin: 25px 100px;
   }
   .animalscontent {
-    padding: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    padding: 20px;
+  }
+  .animalscontent .animalstext {
+    padding: 20px;
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
   .animalscontent .animalstext h1 {
-    font-size: 64px;
+    font-size: 96px;
+    text-align: center;
   }
   .animalscontent .animalstext p {
-    font-size: 16px;
+    font-size: 32px;
   }
   #environment {
     padding: 50px;
   }
   .environmenttext h1 {
-    font-size: 92px;
+    font-size: 96px;
   }
   .environmenttext p {
-    font-size: 36px;
+    font-size: 32px;
+    text-align: justify;
   }
   .envarticles {
     grid-template-columns: 1fr;
@@ -399,24 +410,11 @@ nav .gallery {
   .homecontent button {
     margin: 25px 50px;
   }
-  .animalscontent {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1, 1fr);
-    padding: 20px;
-  }
-  .animalscontent .animalstext {
-    padding: 20px;
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
   .animalscontent .animalstext h1 {
-    font-size: 128px;
-    border-bottom: 10px solid gold;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 64px;
   }
   .animalscontent .animalstext p {
-    font-size: 24px;
+    font-size: 18px;
     text-align: justify;
   }
   #environment {
@@ -427,6 +425,7 @@ nav .gallery {
     border-bottom: 10px solid gold;
   }
   .environmenttext p {
-    font-size: 32px;
+    font-size: 18px;
+    text-align: justify;
   }
 }/*# sourceMappingURL=style.css.map */
