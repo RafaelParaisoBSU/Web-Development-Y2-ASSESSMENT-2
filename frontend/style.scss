@@ -10,6 +10,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: black;
+    overflow-x: hidden;
 }
 
 .links-container {
@@ -168,6 +169,7 @@ nav {
             font-size: 128px;
             border-bottom: 10px solid gold;
             margin-bottom: 20px;
+            text-align: justify;
         }
 
         p {
@@ -184,19 +186,20 @@ nav {
 }
 
 .environmenttext {
-    text-align: center;
     color: white;
     font-family: 'Poppins';
     margin-bottom: 100px;
 
     h1 {
         font-size: 128px;
+        text-align: center;
         border-bottom: 10px solid gold;
         margin-bottom: 20px;
     }
 
     p {
         font-size: 48px;
+        text-align: justify;
     }
 }
 
@@ -230,6 +233,26 @@ nav {
     }
 }
 
+.articletext {
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0px;
+    width: 100%;
+    border-bottom: 10px solid gold;
+
+    h2 {
+        font-size: 24px;
+        font-family: "Poppins";
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-family: "League Spartan";
+    }
+}
+
 .envarticle1 {
     grid-row: span 2;
     grid-column: span 2;
@@ -250,14 +273,13 @@ nav {
 
         h2 {
             font-size: 24px;
-            font-family: "League Spartan";
-            margin: 0;
+            font-family: "Poppins";
+            margin: 20px 0;
         }
 
         h1 {
             font-size: 36px;
             font-family: "League Spartan";
-            margin: 10px 0 0;
         }
     }
 }
@@ -293,22 +315,172 @@ nav {
     justify-content: space-between;
 }
 
-.articletext {
-    display: grid;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 0px;
-    width: 100%;
-    border-bottom: 10px solid gold;
-
-    h2 {
-        font-size: 24px;
-    }
+#history-culture {
+    padding: 50px 100px;
+    color: white;
+    margin: 0 auto;
 
     h1 {
-        font-size: 36px;
+        font-size: 128px;
+        font-family: 'League Spartan';
+        border-bottom: 10px solid gold;
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+
+    p {
+        font-family: 'Poppins';
+        font-size: 48px;
+        text-align: justify;
     }
 }
+
+.hcontainer {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.historyslider {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    overflow: hidden;
+}
+
+.hslide {
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    transform: width 0.4%;
+    box-shadow: 0px 0px 12px 12px rgba(255, 217, 0, 0.2);
+    transition: width 0.4s ease;
+}
+
+.hslide:nth-child(1) {
+    background: url('./assets/history1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.hslide:nth-child(2) {
+    background: url('./assets/history2.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.hslide:nth-child(3) {
+    background: url('./assets/history3.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.hslide:nth-child(4) {
+    background: url('./assets/history4.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.hslide:nth-child(5) {
+    background: url('./assets/history5.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.hslide:hover {
+    width: 70%;
+}
+
+#science {
+    width: 100vw;
+    padding: 100px;
+    margin: 0% auto;
+}
+
+.sciencetext {
+    color: white;
+    font-family: 'Poppins';
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: 128px;
+        text-align: center;
+        border-bottom: 10px solid gold;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 48px;
+        text-align: justify;
+    }
+}
+
+.scivids {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#vidslider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scivids .scinav {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        list-style: none;
+        cursor: pointer;
+        margin: 0 10px;
+        padding: 3px 3px 0;
+        opacity: 0.7;
+        border: solid 2px gold;
+        transition: 0.5s;
+
+        li:hover {
+            opacity: 1;
+        }
+
+        img {
+            width: 200px;
+            transition: 0.5s;
+        }
+
+        img:hover {
+            width: 300px;
+        }
+    }
+}
+
+
 
 @media screen and (width <=1024px) {
 
@@ -375,7 +547,7 @@ nav {
     .animalscontent {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(1, 1fr);
-        padding: 20px;
+        padding: 50px;
 
         .animalstext {
             padding: 20px;
@@ -399,12 +571,11 @@ nav {
 
     .environmenttext {
         h1 {
-            font-size:96px;
+            font-size: 96px;
         }
 
         p {
             font-size: 32px;
-            text-align: justify;
         }
     }
 
@@ -425,77 +596,154 @@ nav {
 
         h1 {
             font-size: 32px;
-            
+
         }
     }
-}
 
-@media screen and (width <=720px) {
-
-    #home {
-        width: 100vw;
-        height: 100vh;
-        padding: 12px;
-        margin: 0 auto;
-        background-image: url('./assets/homeimg.avif');
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-    .homecontent {
-        display: grid;
-        text-align: center;
-        justify-content: center;
-        background: rgb(0, 0, 0, 0.5);
-        width: 70vw;
-        margin: 20vh auto;
-        padding: 20px;
-        border-top: 10px solid gold;
+    #history-culture {
+        padding: 50px;
 
         h1 {
-            margin-top: 25px;
-            font-size: 56px;
+            font-size: 96px;
         }
 
         p {
-            margin-top: 50px;
-            margin-inline: 10px;
-            font-size: 16px;
-        }
-
-        button {
-            margin: 25px 50px;
+            font-size: 32px;
         }
     }
 
-    .animalscontent {
-    
-        .animalstext {
+    .hslide:hover {
+        width: 100%;
+    }
+
+    #science {
+        padding: 50px;
+    }
+
+    .sciencetext {
+        h1 {
+            font-size: 96px;
+        }
+
+        p {
+            font-size: 32px;
+        }
+    }
+
+    .scivids .scinav {
+        li {
+
+            img {
+                width: 150px;
+                transition: 0.5s;
+            }
+
+            img:hover {
+                width: 200px;
+            }
+        }
+    }
+
+    @media screen and (width <=720px) {
+
+        #home {
+            width: 100vw;
+            height: 100vh;
+            padding: 12px;
+            margin: 0 auto;
+            background-image: url('./assets/homeimg.avif');
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+
+        .homecontent {
+            width: 70vw;
+            margin: 20vh auto;
+            padding: 20px;
+
+            h1 {
+                margin-top: 25px;
+                font-size: 64px;
+            }
+
+            p {
+                margin-top: 50px;
+                margin-inline: 10px;
+                font-size: 24px;
+            }
+
+            button {
+                margin: 25px 50px;
+            }
+        }
+
+        .animalscontent {
+
+            .animalstext {
+                h1 {
+                    font-size: 64px;
+                }
+
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        #environment {
+            padding: 50px;
+        }
+
+        .environmenttext {
+
             h1 {
                 font-size: 64px;
             }
 
             p {
-                font-size: 18px;
-                text-align: justify;
+                font-size: 24px;
+            }
+        }
+
+        #history-culture {
+            padding: 50px;
+
+            h1 {
+                font-size: 64px;
+            }
+
+            p {
+                font-size: 24px;
             }
         }
     }
 
-    #environment {
+    
+    #science {
         padding: 50px;
     }
 
-    .environmenttext {
-
+    .sciencetext {
         h1 {
             font-size: 64px;
-            border-bottom: 10px solid gold;
         }
 
         p {
-            font-size: 18px;
-            text-align: justify;
+            font-size: 24px;
+        }
+    }
+
+    .scivids .scinav {
+        li {
+
+            img {
+                width: 100px;
+                transition: 0.5s;
+            }
+
+            img:hover {
+                width: 150px;
+            }
         }
     }
 }

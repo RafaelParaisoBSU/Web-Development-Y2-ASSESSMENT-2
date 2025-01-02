@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Geographic</title>
+    <link rel="icon" href="./assets/favicon.webp">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +92,9 @@
             <div class="environmenttext">
                 <h1>Environment</h1>
                 <p>Learn about the challenges facing our environment and what we can do to protect it for future
-                    generations. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odio repellendus, harum minima sit at odit blanditiis saepe doloribus nam dolore quasi officiis laboriosam cum debitis iusto porro! Reprehenderit, consectetur!</p>
+                    generations. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odio repellendus,
+                    harum minima sit at odit blanditiis saepe doloribus nam dolore quasi officiis laboriosam cum debitis
+                    iusto porro! Reprehenderit, consectetur!</p>
             </div>
             <div class="envarticles">
                 <div class="envarticle1">
@@ -144,15 +147,46 @@
             </div>
         </section>
         <section id="history-culture">
-            <h2>History and Culture</h2>
-            <p>Explore the rich history and diverse cultures of people around the world.</p>
+            <h1>History and Culture</h1>
+            <p>Explore the rich history and diverse cultures of people around the world. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Veritatis, fugit ipsam reiciendis officia ab quo laudantium error illum
+                molestias id inventore consectetur voluptatibus omnis suscipit. Deserunt culpa assumenda quas
+                perferendis!</p>
+        </section>
+        <section class="hcontainer">
+            <div class="historyslider">
+                <div class="hslide">
+                </div>
+                <div class="hslide">
+                </div>
+                <div class="hslide">
+                </div>
+                <div class="hslide">
+                </div>
+                <div class="hslide">
+                </div>
+            </div>
         </section>
         <section id="science">
-            <h2>Science</h2>
-            <p>Stay updated with the latest scientific discoveries and advancements that are shaping our world.</p>
+            <div class="sciencetext">
+                <h1>Science</h1>
+                <p>Stay updated with the latest scientific discoveries and advancements that are shaping our world.</p>
+            </div>
         </section>
+        <div class="scivids">
+            <video id="vidslider" autoplay muted loop>
+                <source src="./assets/science1.mp4" type="video/mp4">
+            </video>
+            <ul class="scinav">
+                <li onclick="videoUrl('./assets/science1.mp4')"><img src="./assets/thumb5.jpg" alt=""></li>
+                <li onclick="videoUrl('./assets/science2.mp4')"><img src="./assets/thumb1.jpg" alt=""></li>
+                <li onclick="videoUrl('./assets/science3.mp4')"><img src="./assets/thumb2.jpg" alt=""></li>
+                <li onclick="videoUrl('./assets/science4.mp4')"><img src="./assets/thumb3.jpg" alt=""></li>
+                <li onclick="videoUrl('./assets/science5.mp4')"><img src="./assets/thumb4.jpg" alt=""></li>
+            </ul>
+        </div>
         <section id="travel">
-            <h2>Travel</h2>
+            <h1>Travel</h1>
             <p>Get inspired by breathtaking travel destinations and tips for your next adventure.</p>
         </section>
     </main>

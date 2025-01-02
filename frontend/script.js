@@ -1,29 +1,6 @@
-// Navigation functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const user = JSON.parse(localStorage.getItem('user'));
-
-    if (!user) {
-        window.location.href = 'loginpage.html';
-    }
-
-    // ScrollReveal functionality
-    ScrollReveal({
-        reset: false,
-        distance: '40px',
-        duration: 2500,
-        delay: 400
-    });
-    ScrollReveal().reveal('.main-content');
-    ScrollReveal().reveal('.home', { delay: 200 });
-    ScrollReveal().reveal('.homecontent', { delay: 200 });
-    ScrollReveal().reveal('#animals', { delay: 200 });
-    ScrollReveal().reveal('.animalscontent', { delay: 200 });
-    ScrollReveal().reveal('.animal', { delay: 200 });
-    ScrollReveal().reveal('.animalstext', { delay: 200 });
-    ScrollReveal().reveal('#environment', { delay: 200 });
-    ScrollReveal().reveal('.envarticles', { delay: 200 });
-});
-
+function videoUrl(hmmmmmm) {
+    document.getElementById("vidslider").src = hmmmmmm;
+}
 // Signup Functionality
 document.getElementById('signup-btn').addEventListener('click', async () => {
     const name = document.getElementById('signup-name').value.trim();
