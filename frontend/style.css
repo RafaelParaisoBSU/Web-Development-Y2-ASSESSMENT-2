@@ -5,10 +5,8 @@
   transition: all 0.1s ease-in-out;
 }
 
-html,
 body {
   width: 100vw;
-  height: 100vh;
   background: black;
   overflow-x: hidden;
 }
@@ -22,6 +20,9 @@ body {
 }
 
 nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999;
   height: 60px;
   background-color: black;
   display: flex;
@@ -117,7 +118,6 @@ nav .gallery {
 #animals {
   width: 100%;
   height: 100%;
-  padding: 12px;
   margin: 0 auto;
 }
 
@@ -143,11 +143,6 @@ nav .gallery {
 .animalscontent img:hover {
   transform: scale(1.02);
   filter: blur(0px);
-}
-.animalscontent h3 {
-  font-size: 36px;
-  text-align: center;
-  position: inline;
 }
 .animalscontent .animalstext {
   padding: 20px;
@@ -445,6 +440,73 @@ nav .gallery {
   width: 300px;
 }
 
+#travel {
+  padding: 100px 100px;
+  color: white;
+  margin: 0 auto;
+}
+#travel h1 {
+  font-size: 128px;
+  font-family: "League Spartan";
+  border-bottom: 10px solid gold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#travel p {
+  font-family: "Poppins";
+  font-size: 48px;
+  text-align: justify;
+}
+
+.travelgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 50px auto;
+  gap: 20px;
+  overflow: hidden;
+}
+.travelgrid img {
+  width: 100%;
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.2s ease-in;
+  border-top: 20px solid gold;
+}
+.travelgrid img:hover {
+  transform: scale(1.02);
+}
+
+.travcard {
+  position: relative;
+  display: inline-block;
+  font-family: "Poppins";
+  text-align: center;
+}
+.travcard h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  text-shadow: 2px 2px 4px black;
+  z-index: 2;
+}
+.travcard button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  border: none;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-family: "Bebas Neue";
+  background-color: gold;
+  cursor: pointer;
+  z-index: 2;
+}
+
 @media screen and (width <= 1024px) {
   .links-container {
     flex-direction: column;
@@ -564,8 +626,28 @@ nav .gallery {
   .scivids .scinav li img:hover {
     width: 200px;
   }
+  #travel {
+    padding: 50px;
+  }
+  #travel h1 {
+    font-size: 96px;
+  }
+  #travel p {
+    font-size: 32px;
+  }
+  .travelgrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 50px auto;
+  }
+  .travelgrid img {
+    height: 700px;
+  }
+  .travcard:nth-child(9) {
+    display: none;
+  }
 }
-@media screen and (width <= 1024px) and (width <= 720px) {
+@media screen and (width <= 720px) {
   #home {
     width: 100vw;
     height: 100vh;
@@ -617,8 +699,6 @@ nav .gallery {
   #history-culture p {
     font-size: 24px;
   }
-}
-@media screen and (width <= 1024px) {
   #science {
     padding: 50px;
   }
@@ -634,5 +714,103 @@ nav .gallery {
   }
   .scivids .scinav li img:hover {
     width: 150px;
+  }
+  .travelgrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .travcard:nth-child(9) {
+    display: none;
+  }
+}
+@media screen and (width <= 540px) {
+  .homecontent {
+    width: 90vw;
+    margin: 40vh auto;
+    padding: 10px;
+  }
+  .homecontent h1 {
+    margin-top: 25px;
+    font-size: 48px;
+  }
+  .homecontent p {
+    margin-top: 50px;
+    margin-inline: 10px;
+    font-size: 16px;
+  }
+  .homecontent button {
+    margin: 25px 50px;
+  }
+  .animalscontent {
+    padding: 10px;
+  }
+  .animalscontent .animalstext {
+    padding: 0;
+  }
+  .animalscontent .animalstext h1 {
+    font-size: 48px;
+  }
+  .animalscontent .animalstext p {
+    font-size: 16px;
+  }
+  #environment {
+    padding: 20px;
+  }
+  .environmenttext {
+    padding: 10px;
+  }
+  .environmenttext h1 {
+    font-size: 48px;
+  }
+  .environmenttext p {
+    font-size: 16px;
+  }
+  #history-culture {
+    padding: 20px;
+  }
+  #history-culture h1 {
+    font-size: 48px;
+  }
+  #history-culture p {
+    font-size: 16px;
+  }
+  .historyslider {
+    width: 100%;
+    height: 600px;
+  }
+  #science {
+    padding: 20px;
+  }
+  .sciencetext h1 {
+    font-size: 48px;
+  }
+  .sciencetext p {
+    font-size: 16px;
+  }
+  .scivids {
+    height: 75vh;
+  }
+  .scivids .scinav li img {
+    width: 80px;
+    transition: 0.5s;
+  }
+  .scivids .scinav li img:hover {
+    width: 90px;
+  }
+  #travel {
+    padding: 20px;
+  }
+  #travel h1 {
+    font-size: 48px;
+  }
+  #travel P {
+    font-size: 16px;
+  }
+  .travelgrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .travcard:nth-child(9) {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
