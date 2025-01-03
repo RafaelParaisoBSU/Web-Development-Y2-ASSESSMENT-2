@@ -11,6 +11,25 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    z-index: -6;
+    width: 15px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gold;
+    border: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkred;
+}
+
 .links-container {
     height: 100%;
     width: 100%;
@@ -20,8 +39,8 @@ body {
 }
 
 nav {
-    position: sticky !important;
-    top: 0 !important;
+    position: sticky;
+    top: 0;
     z-index: 999;
     height: 60px;
     background-color: black;
@@ -114,7 +133,7 @@ nav {
     button {
         margin: 50px 100px;
         padding: 20px;
-        background-color: goldenrod;
+        background-color: darkred;
         color: white;
         font-size: 36px;
         font-family: 'Bebas Neue';
@@ -538,13 +557,55 @@ nav {
         top: 80%;
         left: 50%;
         border: none;
-        padding: 10px 20px;
+        padding: 15px 30px;
         transform: translateX(-50%);
         font-size: 24px;
         font-family: 'Bebas Neue';
-        background-color: gold;
+        background-color: darkred;
+        color: white;
         cursor: pointer;
         z-index: 2;
+    }
+}
+
+.footer {
+    background-color: black;
+    border-top: 10px solid gold;
+    color: #e8eaed;
+    text-align: center;
+
+    img {
+        margin-top: 50px;
+        width: 250px;
+    }
+
+    p {
+        font-family: 'Poppins';
+        font-size: 16px;
+        margin: 50px;
+    }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin: 50px;
+
+    a {
+        color: #e8eaed;
+        font-family: 'Bebas Neue';
+        font-size: 24px;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: gold;
     }
 }
 
@@ -736,6 +797,24 @@ nav {
     .travcard:nth-child(9) {
         display: none;
     }
+
+    .footer {
+
+        img {
+            width: 200px;
+        }
+    
+        p {
+            font-size: 16px;        
+        }
+    }
+    
+    .footer-links {    
+        a {
+            font-size: 24px;
+        }
+    
+    }
 }
 
 @media screen and (width <=720px) {
@@ -847,9 +926,26 @@ nav {
     .travcard:nth-child(9) {
         display: none;
     }
+
+    .footer {
+        img {
+            width: 150px;
+        }
+    
+        p {
+            font-size: 12px;        
+        }
+    }
+    
+    .footer-links {    
+        a {
+            font-size: 16px;
+        }
+    
+    }
 }
 
-@media screen and (width <= 540px) {
+@media screen and (width <=540px) {
 
     .homecontent {
         width: 90vw;
@@ -878,6 +974,7 @@ nav {
 
         .animalstext {
             padding: 0;
+
             h1 {
                 font-size: 48px;
             }
@@ -972,5 +1069,21 @@ nav {
 
     .travcard:nth-child(9) {
         display: none;
+    }
+
+    .footer {
+        img {
+            width: 200px;
+        }
+    
+        p {
+            font-size: 16px;        
+        }
+    }
+    
+    .footer-links {    
+        a {
+            font-size: 24px;
+        }
     }
 }
