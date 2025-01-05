@@ -111,7 +111,11 @@ nav .gallery {
 }
 .signlog #signup-error,
 .signlog #login-error {
-  color: red;
+  background-color: red;
+  font-family: "Bebas Neue";
+  color: white;
+  padding: 10px;
+  font-size: 32px;
 }
 
 .form-container {
@@ -142,7 +146,7 @@ input[type=password] {
   padding: 10px;
   width: 700px;
   align-self: center;
-  background-color: darkred;
+  background-color: gold;
   color: white;
   border: none;
   font-size: 32px;
@@ -152,7 +156,7 @@ input[type=password] {
 }
 
 .signlog button:hover {
-  background-color: red;
+  background-color: darkgoldenrod;
 }
 
 .footer {

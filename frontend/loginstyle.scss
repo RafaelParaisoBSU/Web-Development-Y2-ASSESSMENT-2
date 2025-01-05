@@ -113,10 +113,14 @@ nav {
         text-align: center;
         font-size: 14px;
     }
-    
+
     #signup-error,
     #login-error {
-        color: red;
+        background-color: red;
+        font-family: 'Bebas Neue';
+        color: white;
+        padding: 10px;
+        font-size: 32px;
     }
 }
 
@@ -137,8 +141,7 @@ h2 {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] 
-{
+input[type="password"] {
     align-self: center;
     width: 700px;
     padding: 10px;
@@ -149,7 +152,7 @@ input[type="password"]
     padding: 10px;
     width: 700px;
     align-self: center;
-    background-color: darkred;
+    background-color: gold;
     color: white;
     border: none;
     font-size: 32px;
@@ -159,7 +162,7 @@ input[type="password"]
 }
 
 .signlog button:hover {
-    background-color: red;
+    background-color: darkgoldenrod;
 }
 
 .footer {
@@ -249,19 +252,18 @@ input[type="password"]
     .signlog {
         width: 100%;
     }
-    
+
     .form-container {
         padding: 50px;
     }
-    
+
     input[type="text"],
     input[type="email"],
-    input[type="password"] 
-    {
+    input[type="password"] {
         align-self: center;
         width: 500px;
     }
-    
+
     .signlog button {
         width: 500px;
     }
@@ -271,13 +273,13 @@ input[type="password"]
         img {
             width: 200px;
         }
-    
+
         p {
-            font-size: 16px;        
+            font-size: 16px;
         }
     }
-    
-    .footer-links {    
+
+    .footer-links {
         a {
             font-size: 24px;
         }
@@ -291,17 +293,17 @@ input[type="password"]
         img {
             width: 150px;
         }
-    
+
         p {
-            font-size: 12px;        
+            font-size: 12px;
         }
     }
-    
-    .footer-links {    
+
+    .footer-links {
         a {
             font-size: 16px;
         }
-    
+
     }
 }
 
@@ -313,14 +315,13 @@ input[type="password"]
             font-size: 48px;
         }
     }
-    
+
     input[type="text"],
     input[type="email"],
-    input[type="password"] 
-    {
+    input[type="password"] {
         width: 300px;
     }
-    
+
     .signlog button {
         width: 300px;
     }
@@ -329,13 +330,13 @@ input[type="password"]
         img {
             width: 200px;
         }
-    
+
         p {
-            font-size: 16px;        
+            font-size: 16px;
         }
     }
-    
-    .footer-links {    
+
+    .footer-links {
         a {
             font-size: 24px;
         }
