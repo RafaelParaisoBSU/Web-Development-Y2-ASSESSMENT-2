@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (email && password) {
             try {
-                const response = await fetch('http://localhost:4000/api/user/login', {
+                const response = await fetch('https://rafaelparaisobsu-national-geographic.vercel.app/api/user', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
