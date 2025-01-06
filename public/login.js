@@ -19,7 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 console.log('Response status:', response.status);
-                const data = await response.json();
+                
+                // Check if response has content
+                const contentType = response.headers.get('content-type');
+                let data;
+                
+                if (contentType && contentType.includes('application/json')) {
+                    data = await response.json();
+                } else {
+                    throw new Error('Server returned non-JSON response');
+                }
+
                 console.log('Response data:', data);
 
                 if (response.ok) {
