@@ -10,11 +10,6 @@
       {
         "src": "/Backend/(.*)",
         "dest": "index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
       }
-    ],
-    "cleanUrls": true
+    ]
 }
