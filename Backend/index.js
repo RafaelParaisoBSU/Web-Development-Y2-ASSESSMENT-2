@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
-dotenv.config(); 
+dotenv.config();
 
 const app = express();
 const port = 4000;
