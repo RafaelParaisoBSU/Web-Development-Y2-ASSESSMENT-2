@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (email && password) {
             try {
-                const response = await fetch('https://rafaelparaisobsu-national-geographic.vercel.app/api/user', {
+                const response = await fetch('/api/user/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     localStorage.setItem('user', JSON.stringify(data));
-                    window.location.href = '/index.html';
+                    window.location.href = '/';
                 } else {
                     error.textContent = data.message || 'Login failed';
                     error.style.display = 'block';

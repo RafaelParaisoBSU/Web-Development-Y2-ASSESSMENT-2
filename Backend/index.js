@@ -3,41 +3,53 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
-dotenv.config(); 
+
+dotenv.config();
 
 const app = express();
-const port = 4000;
 
-// Updated CORS configuration
+// Cors configuration
 app.use(cors({
-    origin: [
-        'https://rafaelparaisobsu-national-geographic.vercel.app',
-        'http://localhost:4000' // for local development
-    ],
-    credentials: true
+    origin: process.env.FRONTEND_URL || '*',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+// Middleware
 app.use(express.json());
-app.use('/api/user', userRoutes)
+app.use('/api/user', userRoutes);
 
-const dbURI = process.env.DB_URI;
+// Database connection
 const connectDB = async () => {
     try {
-        await mongoose.connect(dbURI);
+        const dbURI = process.env.MONGODB_URI;
+        await mongoose.connect(dbURI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
         console.log('MongoDB Connected...');
     } catch (err) {
         console.error('Error connecting to MongoDB:', err.message);
+        process.exit(1);
     }
 };
 
+// Initialize DB connection
 connectDB();
 
-// Global error handler
+// Port configuration
+const PORT = process.env.PORT || 3000;
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+// Error handling
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: 'Something went wrong!' });
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+export default app;
