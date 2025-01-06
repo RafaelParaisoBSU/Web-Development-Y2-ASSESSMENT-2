@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     localStorage.setItem('user', JSON.stringify(data));
-                    window.location.href = 'index.html';
+                    window.location.href = '../index.html';
                 } else {
                     error.textContent = data.message || 'Login failed';
                     error.style.display = 'block';
