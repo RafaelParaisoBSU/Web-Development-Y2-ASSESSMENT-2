@@ -3,14 +3,19 @@ import User from '../models/userModel.js';
 const router = express.Router();
 
 
-router.post('/',async(req, res)=>{
-    const {name, email, password} = req.body;
+router.post('/', async (req, res) => {
+    const { name, email, password } = req.body;
     try {
-        const newUser = new User({name, email, password});
-        await newUser.save();
-        res.status(201).json(newUser);
+        let user = await User.findOne({ email });
+
+        if (!user) {
+            user = new User({ name, email, password });
+            await user.save();
+        }
+        res.status(200).json({ user }); 
+
     } catch (error) {
-        res.status(500).json({message: error.message});
+        res.status(500).json({ message: error.message });
     }
 });
 

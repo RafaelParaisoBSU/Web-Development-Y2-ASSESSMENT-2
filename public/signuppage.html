@@ -126,6 +126,9 @@
 
                     if (response.ok) {
                         alert('Sign Up Successful! Redirecting to Login page...');
+                        document.getElementById('signup-name').value = '';
+                        document.getElementById('signup-email').value = '';
+                        document.getElementById('signup-password').value = '';
                         error.style.display = 'none';
                         document.getElementById('signup').classList.add('hidden');
                         document.getElementById('login').classList.remove('hidden');
@@ -184,4 +187,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>
