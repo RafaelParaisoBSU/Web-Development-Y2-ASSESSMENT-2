@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const signupBtn = document.getElementById('signup-btn');
     const loginBtn = document.getElementById('login-btn');
 
-    const baseUrl = 'https://rsbsu-national-geographic.onrender.com/'; // Replace with your actual base URL
+    const baseUrl = 'https://rsbsu-national-geographic.onrender.com'; // Replace with your actual base URL
 
     if (signupBtn) {
         signupBtn.addEventListener('click', async () => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (name && email && password) {
                 try {
-                    const response = await fetch(`${baseUrl}/api/user/`, {
+                    const response = await fetch(`${baseUrl}/`, { // Updated endpoint
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (email && password) {
                 try {
-                    const response = await fetch(`${baseUrl}/api/user/login`, {
+                    const response = await fetch(`${baseUrl}/login`, { // Updated endpoint
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

@@ -18,7 +18,6 @@ app.use(cors({
 
 // Middleware
 app.use(express.json());
-app.use('/api/user', userRoutes);
 
 // Database connection
 const connectDB = async () => {
