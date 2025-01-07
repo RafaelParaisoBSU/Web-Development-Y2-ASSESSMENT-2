@@ -1,3 +1,19 @@
+// Navigation functionality
+const pages = document.querySelectorAll('.page');
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const targetPage = link.getAttribute('data-page');
+
+        pages.forEach(page => {
+            page.classList.add('hidden');
+        });
+
+        document.getElementById(targetPage).classList.remove('hidden');
+    });
+});
+
 // Signup Functionality
 document.getElementById('signup-btn').addEventListener('click', () => {
     const name = document.getElementById('signup-name').value;
