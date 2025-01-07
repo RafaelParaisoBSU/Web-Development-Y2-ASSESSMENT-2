@@ -91,17 +91,24 @@
         </div>
     </footer>
     <script>
-        // Navigation functionality
-        const pages = document.querySelectorAll('.page');
+        const pages = document.querySelectorAll('.page'); 
         const navLinks = document.querySelectorAll('nav a');
 
         navLinks.forEach(link => {
             link.addEventListener('click', event => {
-                event.preventDefault();
-                const targetPage = link.getAttribute('data-page');
+                event.preventDefault(); r
 
-                pages.forEach(page => page.classList.add('hidden'));
-                document.getElementById(targetPage).classList.remove('hidden');
+                const targetPageId = link.getAttribute('data-page'); 
+
+                if (targetPageId) {
+                    pages.forEach(page => {
+                        if (page.id === targetPageId) {
+                            page.classList.remove('hidden');
+                        } else {
+                            page.classList.add('hidden'); 
+                        }
+                    });
+                } 
             });
         });
 
