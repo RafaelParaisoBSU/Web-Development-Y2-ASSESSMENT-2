@@ -42,7 +42,6 @@
                 </svg>
             </label>
             <a href="../index.html">Home</a>
-            <a href="./loginpage.html">Login</a>
             <a href="./signuppage.html">Sign Up</a>
             <a href="./gallery.html" class="gallery">Gallery</a>
             <a href="../index.html#animals">Animals</a>
@@ -54,7 +53,7 @@
     </nav>
     <div class="signlogcontainer">
         <section class="signlog">
-            <div id="signup" class="page hidden">
+            <div id="signup" class="page">
                 <div class="form-container">
                     <h2>Sign Up</h2>
                     <input type="text" id="signup-name" placeholder="Enter your name" required>
@@ -64,6 +63,15 @@
                     <p id="signup-error" style="display: none;">Please fill in all fields.</p>
                 </div>
             </div>
+            <div id="login" class="page hidden">
+                <div class="form-container">
+                    <h2>Login</h2>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                    <button id="login-btn">Login</button>
+                    <p id="login-error" style="display: none;">Invalid email or password.</p>
+                </div>
+            </div>
         </section>
     </div>
     <footer class="footer">
@@ -71,7 +79,6 @@
             <img src="./assets/logo.png" alt="">
             <div class="footer-links">
                 <a href="../index.html">Home</a>
-                <a href="./loginpage.html">Login</a>
                 <a href="./signuppage.html">Sign Up</a>
                 <a href="./gallery.html" class="gallery">Gallery</a>
                 <a href="../index.html#animals">Animals</a>

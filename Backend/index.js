@@ -3,52 +3,30 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
+dotenv.config(); 
 
-dotenv.config();
 
 const app = express();
+const port = 4000;
 
-// Cors configuration
-app.use(cors({
-    origin: process.env.FRONTEND_URL || '*',
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 
-// Middleware
 app.use(express.json());
+app.use('/api/user', userRoutes)
 
-// Database connection
+const dbURI = process.env.DB_URI;
+
 const connectDB = async () => {
     try {
-        const dbURI = process.env.DB_URI;
-        await mongoose.connect(dbURI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        await mongoose.connect(dbURI);
         console.log('MongoDB Connected...');
     } catch (err) {
         console.error('Error connecting to MongoDB:', err.message);
-        process.exit(1);
     }
 };
 
-// Initialize DB connection
 connectDB();
 
-// Port configuration
-const PORT = process.env.PORT || 4000;
-
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
-
-// Error handling
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ message: 'Something went wrong!' });
-});
-
-export default app;
