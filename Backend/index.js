@@ -23,7 +23,7 @@ app.use('/api/user', userRoutes);
 // Database connection
 const connectDB = async () => {
     try {
-        const dbURI = process.env.MONGODB_URI;
+        const dbURI = process.env.DB_URI;
         await mongoose.connect(dbURI, {
             useNewUrlParser: true,
             useUnifiedTopology: true
@@ -39,7 +39,7 @@ const connectDB = async () => {
 connectDB();
 
 // Port configuration
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Start server
 app.listen(PORT, () => {

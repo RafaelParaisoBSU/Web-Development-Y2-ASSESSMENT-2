@@ -4,10 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (signupBtn) {
         signupBtn.addEventListener('click', async () => {
-            const name = document.getElementById('signup-name').value.trim();
-            const email = document.getElementById('signup-email').value.trim();
-            const password = document.getElementById('signup-password').value.trim();
+            const nameInput = document.getElementById('signup-name');
+            const emailInput = document.getElementById('signup-email');
+            const passwordInput = document.getElementById('signup-password');
             const error = document.getElementById('signup-error');
+
+            if (!nameInput || !emailInput || !passwordInput || !error) {
+                console.error('One or more elements are missing.');
+                return;
+            }
+
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
 
             if (name && email && password) {
                 try {
@@ -43,9 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (loginBtn) {
         loginBtn.addEventListener('click', async () => {
-            const email = document.getElementById('login-email').value.trim();
-            const password = document.getElementById('login-password').value.trim();
+            const emailInput = document.getElementById('login-email');
+            const passwordInput = document.getElementById('login-password');
             const error = document.getElementById('login-error');
+
+            if (!emailInput || !passwordInput || !error) {
+                console.error('One or more elements are missing.');
+                return;
+            }
+
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
 
             if (email && password) {
                 try {
