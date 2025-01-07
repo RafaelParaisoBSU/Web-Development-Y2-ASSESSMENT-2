@@ -15,6 +15,7 @@ app.use(express.json());
 app.use('/api/user', userRoutes)
 
 const dbURI = process.env.DB_URI;
+// const dbURI = "mongodb://localhost:27017"
 
 const connectDB = async () => {
     try {
