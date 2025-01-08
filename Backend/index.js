@@ -21,7 +21,7 @@ app.use('/api/user', userRoutes);
 // Database connection
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect(process.env.DB_URI);
         console.log('MongoDB Connected...');
     } catch (err) {
         console.error('Error connecting to MongoDB:', err.message);
@@ -30,7 +30,7 @@ const connectDB = async () => {
 
 connectDB();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
