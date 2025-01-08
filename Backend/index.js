@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
-dotenv.config(); 
+dotenv.config();
 
 
 const app = express();
@@ -11,6 +11,9 @@ const port = 4000;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
 app.use(express.json());
 app.use('/api/user', userRoutes)
 
