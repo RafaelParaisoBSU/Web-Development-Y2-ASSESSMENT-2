@@ -154,7 +154,7 @@
                         error.style.display = 'none';
                         localStorage.setItem('user', JSON.stringify(data));
 
-                        window.location.href = '../index.html';
+                        window.location.href = './index.html';
                     } else {
                         error.textContent = data.message || 'Invalid email or password.';
                         error.style.display = 'block';
