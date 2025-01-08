@@ -677,6 +677,10 @@ nav {
         grid-template-rows: repeat(1, 1fr);
         padding: 50px;
 
+        img {
+            filter: blur(0px);
+        }
+
         .animalstext {
             padding: 20px;
             grid-column-start: 1;
@@ -690,6 +694,7 @@ nav {
             p {
                 font-size: 32px;
             }
+
         }
     }
 
@@ -953,25 +958,25 @@ nav {
         padding: 10px;
 
         h1 {
-            margin-top: 25px;
+            margin: 25px 0px;
             font-size: 48px;
         }
 
         p {
-            margin-top: 50px;
+            margin: 25px 0px;
             margin-inline: 10px;
             font-size: 16px;
         }
 
         button {
-            margin: 25px 50px;
+            font-size: 36px;
+            margin: 25px 10px;
         }
     }
 
 
     .animalscontent {
-        padding: 10px;
-
+        padding: 20px;
         .animalstext {
             padding: 0;
 
@@ -986,25 +991,58 @@ nav {
     }
 
     #environment {
+        width: 100vw;
         padding: 20px;
     }
-
+    
     .environmenttext {
-        padding: 10px;
-
+        padding: 0px;
+        color: white;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
         h1 {
             font-size: 48px;
+            margin-bottom: 20px;
         }
-
+    
         p {
             font-size: 16px;
         }
     }
+    
+    .envarticles {
+        img {
+            height: 500px;
+        }
+    
+        a {
+            font-size: 24px;
+            padding: 20px;
+        }
+    }
+    
+    .articletext {
+        padding: 20px 0px;
+        border-bottom: 10px solid gold;
+    
+        h2 {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+    
+        h1 {
+            font-size: 36px;
+        }
+    }
+    
 
     #history-culture {
         padding: 20px;
+        margin: 50px 0px;
 
         h1 {
+            margin: 20px 0;
             font-size: 48px;
         }
 
@@ -1015,7 +1053,12 @@ nav {
 
     .historyslider {
         width: 100%;
-        height: 600px;
+        height: 400px;
+    }
+
+    .hcontainer {
+        margin: 50px 0px;
+        height: 100%;
     }
 
     #science {
@@ -1023,6 +1066,8 @@ nav {
     }
 
     .sciencetext {
+        margin: 50px 0px;
+
         h1 {
             font-size: 48px;
         }
@@ -1040,17 +1085,17 @@ nav {
         li {
 
             img {
-                width: 80px;
-                transition: 0.5s;
+                width: 50px;
             }
 
             img:hover {
-                width: 90px;
+                width: 60px;
             }
         }
     }
 
     #travel {
+        margin: 50px 0px;
         padding: 20px;
 
         h1 {
@@ -1062,9 +1107,19 @@ nav {
         }
     }
 
+    .travcard {
+        h3 {
+            font-size: 36px;
+        }
+    }
+
     .travelgrid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
+
+        img {
+            height: 500px;
+        }
     }
 
     .travcard:nth-child(9) {
@@ -1096,26 +1151,27 @@ nav {
         padding: 10px;
 
         h1 {
-            margin-top: 10px;
+            margin: 25px 0px;
             font-size: 36px;
         }
 
         p {
-            margin-top: 10px;
+            margin: 25px 0px;
             margin-inline: 10px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         button {
-            margin: 15px 30px;
+            font-size: 24px;
+            margin: 15px 5px;
         }
     }
 
 
     .animalscontent {
-        .animalstext {
-            padding: 0;
+        padding: 1ch;
 
+        .animalstext {
             h1 {
                 font-size: 36px;
             }
@@ -1129,23 +1185,55 @@ nav {
     #environment {
         padding: 10px;
     }
-
+    
     .environmenttext {
-        padding: 10px;
-
+        padding: 0px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    
         h1 {
             font-size: 36px;
+            text-align: center;
+            border-bottom: 10px solid gold;
+            margin-bottom: 20px;
         }
-
+    
         p {
             font-size: 12px;
+            text-align: justify;
         }
     }
+    
+    .envarticles {
+        img {
+            height: 250px;
+        }
+    
+        a {
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+    
+    .articletext {
+        padding: 10px 0px;    
+
+        h2 {
+            font-size: 12px;
+        }
+    
+        h1 {
+            font-size: 24px;
+        }
+    }
+    
 
     #history-culture {
         padding: 10px;
+        margin: 25px 0px;
 
         h1 {
+            margin: 20px 0;
             font-size: 36px;
         }
 
@@ -1155,15 +1243,20 @@ nav {
     }
 
     .historyslider {
-        width: 100%;
-        height: 600px;
+        height: 300px;
+    }
+
+    .hcontainer {
+        margin: 25px 0px;
     }
 
     #science {
-        padding: 20px;
+        padding: 10px;
     }
 
     .sciencetext {
+        margin: 25px 0px;
+
         h1 {
             font-size: 36px;
         }
@@ -1174,7 +1267,7 @@ nav {
     }
 
     .scivids {
-        height: 75vh;
+        height: 50vh;
     }
 
     .scivids .scinav {
@@ -1182,7 +1275,6 @@ nav {
 
             img {
                 width: 40px;
-                transition: 0.5s;
             }
 
             img:hover {
@@ -1192,7 +1284,8 @@ nav {
     }
 
     #travel {
-        padding: 20px;
+        margin: 25px 0px;
+        padding: 10px;
 
         h1 {
             font-size: 36px;
@@ -1201,6 +1294,19 @@ nav {
         P {
             font-size: 12px;
         }
+    }
+
+    .travelgrid {
+        img {
+            height: 450px;
+        }
+    }
+
+    .travcard {
+        h3 {
+            font-size: 36px;
+        }
+
     }
 
     .footer {
