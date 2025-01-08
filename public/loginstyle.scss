@@ -290,7 +290,7 @@ input[type="password"] {
 
 }
 
-@media screen and (width <=720px) {
+@media screen and (width <=768px) {
 
     .footer {
         img {
@@ -310,38 +310,64 @@ input[type="password"] {
     }
 }
 
-@media screen and (width <=540px) {
+@media screen and (width <=425px) {
     .form-container {
-        padding: 50px;
+        padding: 20px;
 
         h2 {
-            font-size: 48px;
+            font-size: 32px;
         }
     }
 
     input[type="text"],
     input[type="email"],
     input[type="password"] {
-        width: 300px;
+        width: 200px;
     }
 
     .signlog button {
-        width: 300px;
+        width: 200px;
     }
 
     .footer {
         img {
-            width: 200px;
+            width: 150px;
         }
 
         p {
-            font-size: 16px;
+            font-size: 12px;
         }
     }
 
     .footer-links {
         a {
             font-size: 24px;
+        }
+    }
+}
+
+@media screen and (width <=375px) {
+    .form-container {
+        padding: 15px;
+
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .footer {
+        img {
+            width: 150px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .footer-links {
+        a {
+            font-size: 16px;
         }
     }
 }

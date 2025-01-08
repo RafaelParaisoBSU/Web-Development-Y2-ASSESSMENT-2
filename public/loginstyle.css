@@ -261,7 +261,7 @@ input[type=password] {
     font-size: 24px;
   }
 }
-@media screen and (width <= 720px) {
+@media screen and (width <= 768px) {
   .footer img {
     width: 150px;
   }
@@ -272,28 +272,45 @@ input[type=password] {
     font-size: 16px;
   }
 }
-@media screen and (width <= 540px) {
+@media screen and (width <= 425px) {
   .form-container {
-    padding: 50px;
+    padding: 20px;
   }
   .form-container h2 {
-    font-size: 48px;
+    font-size: 32px;
   }
   input[type=text],
   input[type=email],
   input[type=password] {
-    width: 300px;
-  }
-  .signlog button {
-    width: 300px;
-  }
-  .footer img {
     width: 200px;
   }
+  .signlog button {
+    width: 200px;
+  }
+  .footer img {
+    width: 150px;
+  }
   .footer p {
-    font-size: 16px;
+    font-size: 12px;
   }
   .footer-links a {
     font-size: 24px;
+  }
+}
+@media screen and (width <= 375px) {
+  .form-container {
+    padding: 15px;
+  }
+  .form-container h2 {
+    font-size: 32px;
+  }
+  .footer img {
+    width: 150px;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+  .footer-links a {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=loginstyle.css.map */

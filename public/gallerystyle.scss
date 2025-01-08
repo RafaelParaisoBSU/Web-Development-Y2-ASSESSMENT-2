@@ -161,7 +161,7 @@ nav {
     object-fit: cover;
 }
 
-@media (max-width: 1024px) {
+@media screen and (width <=1024px) {
 
     .links-container {
         flex-direction: column;
@@ -226,5 +226,28 @@ nav {
 
     .active h1 {
         opacity: 1;
+    }
+}
+
+@media screen and (width <=768px) {
+
+    .title h1 {
+        font-size: 48px;
+    }
+}
+
+
+@media screen and (width <=425px) {
+
+    .title h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media screen and (width <=375px) {
+
+    .title h1 {
+        font-size: 28px;
     }
 }

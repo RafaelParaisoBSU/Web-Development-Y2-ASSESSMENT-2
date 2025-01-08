@@ -713,7 +713,7 @@ nav .gallery {
     font-size: 24px;
   }
 }
-@media screen and (width <= 720px) {
+@media screen and (width <= 768px) {
   #home {
     width: 100vw;
     height: 100vh;
@@ -798,10 +798,10 @@ nav .gallery {
     font-size: 16px;
   }
 }
-@media screen and (width <= 540px) {
+@media screen and (width <= 425px) {
   .homecontent {
     width: 90vw;
-    margin: 40vh auto;
+    margin: 20vh auto;
     padding: 10px;
   }
   .homecontent h1 {
@@ -896,5 +896,95 @@ nav .gallery {
   }
   .footer-links a {
     font-size: 24px;
+  }
+}
+@media screen and (width <= 375px) {
+  .homecontent {
+    width: 90vw;
+    margin: 20vh auto;
+    padding: 10px;
+  }
+  .homecontent h1 {
+    margin-top: 10px;
+    font-size: 36px;
+  }
+  .homecontent p {
+    margin-top: 10px;
+    margin-inline: 10px;
+    font-size: 16px;
+  }
+  .homecontent button {
+    margin: 15px 30px;
+  }
+  .animalscontent .animalstext {
+    padding: 0;
+  }
+  .animalscontent .animalstext h1 {
+    font-size: 36px;
+  }
+  .animalscontent .animalstext p {
+    font-size: 12px;
+  }
+  #environment {
+    padding: 10px;
+  }
+  .environmenttext {
+    padding: 10px;
+  }
+  .environmenttext h1 {
+    font-size: 36px;
+  }
+  .environmenttext p {
+    font-size: 12px;
+  }
+  #history-culture {
+    padding: 10px;
+  }
+  #history-culture h1 {
+    font-size: 36px;
+  }
+  #history-culture p {
+    font-size: 12px;
+  }
+  .historyslider {
+    width: 100%;
+    height: 600px;
+  }
+  #science {
+    padding: 20px;
+  }
+  .sciencetext h1 {
+    font-size: 36px;
+  }
+  .sciencetext p {
+    font-size: 12px;
+  }
+  .scivids {
+    height: 75vh;
+  }
+  .scivids .scinav li img {
+    width: 40px;
+    transition: 0.5s;
+  }
+  .scivids .scinav li img:hover {
+    width: 45px;
+  }
+  #travel {
+    padding: 20px;
+  }
+  #travel h1 {
+    font-size: 36px;
+  }
+  #travel P {
+    font-size: 12px;
+  }
+  .footer img {
+    width: 150px;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+  .footer-links a {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
