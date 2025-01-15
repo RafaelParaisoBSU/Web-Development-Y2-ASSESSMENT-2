@@ -1,27 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    AOS.init({
+  // Initialize AOS library with custom settings
+  AOS.init({
       // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: 'aos-init', // class applied after initialization
-      animatedClassName: 'aos-animate', // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-      
-    
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 150, // offset (in px) from the original trigger point
-      delay: 200, // values from 0 to 3000, with step 50ms
-      duration: 1500, // values from 0 to 3000, with step 50ms
-      easing: 'ease', // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: true, // whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-    });
+      disable: false, // Disable AOS on specific devices or conditions
+      startEvent: 'DOMContentLoaded', // Event that triggers AOS initialization
+      initClassName: 'aos-init', // Class added after AOS initialization
+      animatedClassName: 'aos-animate', // Class added during animation
+      useClassNames: false, // Add data-aos as classes on scroll if true
+      disableMutationObserver: false, // Disable automatic mutation detection
+      debounceDelay: 50, // Delay for debounce during window resize
+      throttleDelay: 99, // Delay for throttle during page scroll
+
+      // Element-specific settings:
+      offset: 150, // Offset from trigger point in pixels
+      delay: 200, // Delay before animation starts (0 to 3000 ms)
+      duration: 1500, // Duration of animation (0 to 3000 ms)
+      easing: 'ease', // Easing function for animations
+      once: false, // Animate only once while scrolling down
+      mirror: true, // Animate out while scrolling past elements
+      anchorPlacement: 'top-bottom', // Position of element to trigger animation
+  });
 });
 
-function videoUrl(hmmmmmm) {
-    document.getElementById("vidslider").src = hmmmmmm;
+// Function to update the video source
+function videoUrl(videoPath) {
+  // Set the source of the video element to the provided path
+  document.getElementById("vidslider").src = videoPath;
 }

@@ -9,24 +9,20 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <script src="./script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="./script.js"></script>
 </head>
 
 <body>
+    <!-- Navigation bar with logo and links -->
     <nav>
-        <img src="./assets/logo.png" alt="">
+        <img src="./assets/logo.png" alt="National Geographic Logo">
         <input type="checkbox" id="sidebar-active">
         <label for="sidebar-active" class="open-sidebar-button">
+            <!-- SVG icon for opening sidebar -->
             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
             </svg>
@@ -35,12 +31,12 @@
         <label id="overlay" for="sidebar-active"></label>
         <div class="links-container">
             <label for="sidebar-active" class="close-sidebar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
-                    fill="#e8eaed">
-                    <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                <!-- SVG icon for closing sidebar -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                 </svg>
             </label>
+            <!-- Navigation links -->
             <a href="index.html">Home</a>
             <a href="./signuppage.html">Sign Up</a>
             <a href="./gallery.html" class="gallery">Gallery</a>
@@ -52,61 +48,56 @@
         </div>
     </nav>
 
+    <!-- Main content area with sections -->
     <main id="main-content" data-aos="fade-in">
+        <!-- Home section with introductory content -->
         <section id="home" data-aos="fade-in">
             <div class="homecontent" data-aos="slide-up">
                 <h1>Enter the WILD</h1>
-                <p>Explore the wonders of our planet through stunning photography and insightful articles. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Quo, obcaecati dicta! Ex reprehenderit expedita nihil.
-                    Totam impedit a illo eos quae temporibus nobis officiis obcaecati nisi quia id, reiciendis odit?</p>
+                <p>Explore the wonders of our planet through stunning photography and insightful articles. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, obcaecati dicta! Ex reprehenderit expedita nihil. Totam impedit a illo eos quae temporibus nobis officiis obcaecati nisi quia id, reiciendis odit?</p>
                 <button>Read More</button>
             </div>
         </section>
+        <!-- Animals section with images and text -->
         <section id="animals">
             <div class="animalscontent" data-aos="fade-right">
                 <div class="animal1" data-aos="fade-right">
-                    <img src="./assets/animal1.jpg" alt="">
+                    <img src="./assets/animal1.jpg" alt="Animal 1">
                 </div>
                 <div class="animal2" data-aos="fade-right">
-                    <img src="./assets/animal2.jpg" alt="">
+                    <img src="./assets/animal2.jpg" alt="Animal 2">
                 </div>
                 <div class="animalstext" data-aos="fade-right">
                     <h1>Animals</h1>
-                    <p>Discover the amazing diversity of wildlife on our planet, from the smallest insects to the
-                        largest
-                        mammals. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, iure optio molestiae
-                        dolorum non voluptas hic vero consequuntur nulla aperiam, deleniti nemo quis placeat modi at cum
-                        perferendis porro aspernatur?</p>
+                    <p>Discover the amazing diversity of wildlife on our planet, from the smallest insects to the largest mammals. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, iure optio molestiae dolorum non voluptas hic vero consequuntur nulla aperiam, deleniti nemo quis placeat modi at cum perferendis porro aspernatur?</p>
                 </div>
                 <div class="animal3" data-aos="fade-right">
-                    <img src="./assets/animal3.jpg" alt="" >
+                    <img src="./assets/animal3.jpg" alt="Animal 3">
                 </div>
                 <div class="animal4" data-aos="fade-right">
-                    <img src="./assets/animal4.jpg" alt="">
+                    <img src="./assets/animal4.jpg" alt="Animal 4">
                 </div>
                 <div class="animal5" data-aos="fade-right">
-                    <img src="./assets/animal5.jpg" alt="">
+                    <img src="./assets/animal5.jpg" alt="Animal 5">
                 </div>
             </div>
         </section>
+        <!-- Environment section with articles -->
         <section id="environment" data-aos="fade-up">
             <div class="environmenttext" data-aos="fade-in">
                 <h1>Environment</h1>
-                <p>Learn about the challenges facing our environment and what we can do to protect it for future
-                    generations. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odio repellendus,
-                    harum minima sit at odit blanditiis saepe doloribus nam dolore quasi officiis laboriosam cum debitis
-                    iusto porro! Reprehenderit, consectetur!</p>
+                <p>Learn about the challenges facing our environment and what we can do to protect it for future generations. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odio repellendus, harum minima sit at odit blanditiis saepe doloribus nam dolore quasi officiis laboriosam cum debitis iusto porro! Reprehenderit, consectetur!</p>
             </div>
             <div class="envarticles">
                 <div class="envarticle1" data-aos="zoom-in">
-                    <img src="./assets/env1.jpg" alt="">
+                    <img src="./assets/env1.jpg" alt="Environment Article 1">
                     <div class="articletext">
                         <h2>Magazine</h2>
                         <h1>Seven Things to Know About Climate Change</h1>
                     </div>
                 </div>
                 <div class="envarticle2" data-aos="zoom-in">
-                    <img src="./assets/env2.jpg" alt="">
+                    <img src="./assets/env2.jpg" alt="Environment Article 2">
                     <div class="articletext">
                         <h2>Environment</h2>
                         <h1>The Future of the Forests</h1>
@@ -114,15 +105,15 @@
                     <a href="">READ</a>
                 </div>
                 <div class="envarticle3" data-aos="zoom-in">
-                    <img src="./assets/env3.jpg" alt="">
+                    <img src="./assets/env3.jpg" alt="Environment Article 3">
                     <div class="articletext">
                         <h2>History and Culture</h2>
-                        <h1>Race to rescue the Artic Relics</h1>
+                        <h1>Race to rescue the Arctic Relics</h1>
                     </div>
                     <a href="">READ</a>
                 </div>
                 <div class="envarticle4" data-aos="zoom-in">
-                    <img src="./assets/env4.jpg" alt="">
+                    <img src="./assets/env4.jpg" alt="Environment Article 4">
                     <div class="articletext">
                         <h2>Environment</h2>
                         <h1>The Wildfires of 2024</h1>
@@ -130,7 +121,7 @@
                     <a href="">READ</a>
                 </div>
                 <div class="envarticle5" data-aos="zoom-in">
-                    <img src="./assets/env5.jpg" alt="">
+                    <img src="./assets/env5.jpg" alt="Environment Article 5">
                     <div class="articletext">
                         <h2>Science</h2>
                         <h1>The Sea of Flesh</h1>
@@ -138,7 +129,7 @@
                     <a href="">READ</a>
                 </div>
                 <div class="envarticle6" data-aos="zoom-in">
-                    <img src="./assets/env6.jpg" alt="">
+                    <img src="./assets/env6.jpg" alt="Environment Article 6">
                     <div class="articletext">
                         <h2>Environment</h2>
                         <h1>The Stakes are Burning</h1>
@@ -147,27 +138,22 @@
                 </div>
             </div>
         </section>
+        <!-- History and Culture section -->
         <section id="history-culture" data-aos="slide-up">
             <h1>History and Culture</h1>
-            <p>Explore the rich history and diverse cultures of people around the world. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Veritatis, fugit ipsam reiciendis officia ab quo laudantium error illum
-                molestias id inventore consectetur voluptatibus omnis suscipit. Deserunt culpa assumenda quas
-                perferendis!</p>
+            <p>Explore the rich history and diverse cultures of people around the world. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, fugit ipsam reiciendis officia ab quo laudantium error illum molestias id inventore consectetur voluptatibus omnis suscipit. Deserunt culpa assumenda quas perferendis!</p>
         </section>
+        <!-- History slider section -->
         <section class="hcontainer" data-aos="slide-right">
             <div class="historyslider">
-                <div class="hslide">
-                </div>
-                <div class="hslide">
-                </div>
-                <div class="hslide">
-                </div>
-                <div class="hslide">
-                </div>
-                <div class="hslide">
-                </div>
+                <div class="hslide"></div>
+                <div class="hslide"></div>
+                <div class="hslide"></div>
+                <div class="hslide"></div>
+                <div class="hslide"></div>
             </div>
         </section>
+        <!-- Science section with video slider -->
         <section id="science" data-aos="slide-up">
             <div class="sciencetext">
                 <h1>Science</h1>
@@ -179,13 +165,14 @@
                 <source src="./assets/science1.mp4" type="video/mp4">
             </video>
             <ul class="scinav">
-                <li onclick="videoUrl('./assets/science1.mp4')"><img src="./assets/thumb5.jpg" alt=""></li>
-                <li onclick="videoUrl('./assets/science2.mp4')"><img src="./assets/thumb1.jpg" alt=""></li>
-                <li onclick="videoUrl('./assets/science3.mp4')"><img src="./assets/thumb2.jpg" alt=""></li>
-                <li onclick="videoUrl('./assets/science4.mp4')"><img src="./assets/thumb3.jpg" alt=""></li>
-                <li onclick="videoUrl('./assets/science5.mp4')"><img src="./assets/thumb4.jpg" alt=""></li>
+                <li onclick="videoUrl('./assets/science1.mp4')"><img src="./assets/thumb5.jpg" alt="Thumbnail 1"></li>
+                <li onclick="videoUrl('./assets/science2.mp4')"><img src="./assets/thumb1.jpg" alt="Thumbnail 2"></li>
+                <li onclick="videoUrl('./assets/science3.mp4')"><img src="./assets/thumb2.jpg" alt="Thumbnail 3"></li>
+                <li onclick="videoUrl('./assets/science4.mp4')"><img src="./assets/thumb3.jpg" alt="Thumbnail 4"></li>
+                <li onclick="videoUrl('./assets/science5.mp4')"><img src="./assets/thumb4.jpg" alt="Thumbnail 5"></li>
             </ul>
         </div>
+        <!-- Travel section with grid of travel cards -->
         <section id="travel" data-aos="fade-down">
             <h1>Travel</h1>
             <p>Get inspired by breathtaking travel destinations and tips for your next adventure.</p>
@@ -193,53 +180,54 @@
                 <div class="travcard" data-aos="fade-up">
                     <h3>Destination Guides</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard1.jpg" alt="">
+                    <img src="./assets/travcard1.jpg" alt="Travel Card 1">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>National Parks</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard2.jpg" alt="">
+                    <img src="./assets/travcard2.jpg" alt="Travel Card 2">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>World Heritage</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard3.jpg" alt="">
+                    <img src="./assets/travcard3.jpg" alt="Travel Card 3">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>Family Trips</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard4.jpg" alt="">
+                    <img src="./assets/travcard4.jpg" alt="Travel Card 4">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>Adventure</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard5.jpg" alt="">
+                    <img src="./assets/travcard5.jpg" alt="Travel Card 5">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>Best of the World</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard6.jpg" alt="">
+                    <img src="./assets/travcard6.jpg" alt="Travel Card 6">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>Traveller Guide</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard7.jpg" alt="">
+                    <img src="./assets/travcard7.jpg" alt="Travel Card 7">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>Food and Cuisine</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard8.jpg" alt="">
+                    <img src="./assets/travcard8.jpg" alt="Travel Card 8">
                 </div>
                 <div class="travcard" data-aos="fade-up">
                     <h3>Adventures Everywhere</h3>
                     <button>SEE MORE</button>
-                    <img src="./assets/travcard9.jpg" alt="">
+                    <img src="./assets/travcard9.jpg" alt="Travel Card 9">
                 </div>
             </div>
         </section>
+        <!-- Footer with links and copyright -->
         <footer class="footer">
             <div class="footer-content">
-                <img src="./assets/logo.png" alt="">
+                <img src="./assets/logo.png" alt="National Geographic Logo">
                 <div class="footer-links">
                     <a href="index.html">Home</a>
                     <a href="./signuppage.html">Sign Up</a>
@@ -254,6 +242,7 @@
             </div>
         </footer>
     </main>
+    <!-- External scripts -->
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>

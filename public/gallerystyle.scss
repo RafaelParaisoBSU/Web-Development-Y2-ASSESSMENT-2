@@ -1,24 +1,21 @@
-:root {
-    --color-1: black;
-    --text-color: white;
-    --accent-color: goldenrod;
-}
-
+// Global Styles
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+// Base Styles for HTML and Body
 html,
 body {
     width: 100%;
     height: 100%;
-    background: var(--color-1);
+    background: black;
     overflow-x: hidden;
     position: relative;
 }
 
+// Navigation Links Container
 .links-container {
     height: 100%;
     width: 100%;
@@ -27,20 +24,23 @@ body {
     align-items: center;
 }
 
+// Navigation Bar
 nav {
     height: 60px;
-    background-color: var(--color-1);
+    background-color: black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border-bottom: 2px solid goldenrod;
 
+    // Logo Image
     img {
         width: 120px;
         padding-inline: 20px;
         margin-right: auto;
     }
 
+    // Navigation Links
     a {
         font-size: 24px;
         font-family: 'Bebas Neue';
@@ -48,34 +48,40 @@ nav {
         padding: 0 30px;
         display: flex;
         align-items: center;
-        color: var(--text-color);
+        color: white;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
     }
 
+    // Hover Effect for Links
     a:hover {
-        background-color: var(--accent-color);
+        background-color: goldenrod;
     }
 
+    // SVG Icons
     svg {
-        fill: var(--text-color);
+        fill: white;
     }
 
+    // Gallery Link
     .gallery {
         margin-left: auto;
     }
 }
 
+// Sidebar Toggle Checkbox
 #sidebar-active {
     display: none;
 }
 
+// Sidebar Toggle Buttons
 .open-sidebar-button,
 .close-sidebar-button {
     cursor: pointer;
     display: none;
 }
 
+// Slider Container
 .slider {
     width: 100vw;
     height: 100vh;
@@ -84,6 +90,7 @@ nav {
     position: relative;
 }
 
+// Slide Titles
 .slide-titles {
     position: absolute;
     top: 0;
@@ -93,9 +100,10 @@ nav {
     display: flex;
     pointer-events: none;
     z-index: 2;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
+// Individual Slide Title
 .title {
     flex: 1;
     width: 100%;
@@ -104,6 +112,7 @@ nav {
     justify-content: center;
     align-items: center;
 
+    // Title Text
     h1 {
         text-align: center;
         font-size: 48px;
@@ -113,17 +122,19 @@ nav {
     }
 }
 
+// Active Slide Title
 .active h1 {
     color: white;
     border-bottom: 10px solid gold;
     transition: all 0.7s ease;    
 }
 
+// Slide Images Container
 .slide-images {
-    width: 90vw; // Changed from fixed 1280px
-    max-width: 1280px; // Add maximum width
-    height: 80vh; // Changed from fixed 720px
-    max-height: 720px; // Add maximum height
+    width: 90vw;
+    max-width: 1280px;
+    height: 80vh;
+    max-height: 720px;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -132,6 +143,7 @@ nav {
     opacity: 0.8;
 }
 
+// Top Image in Slide
 .img-top {
     position: absolute;
     width: 100%;
@@ -141,6 +153,7 @@ nav {
     border-top: 10px solid gold;
 }
 
+// Bottom Image in Slide
 .img-bottom {
     position: absolute;
     width: 100%;
@@ -149,6 +162,7 @@ nav {
     transition: clip-path 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+// Hover Effects for Slide Images
 .slide-images:hover .img-top {
     clip-path: polygon(90% 0%, 10% 0%, 10% 50%, 90% 50%);
 }
@@ -157,7 +171,8 @@ nav {
     clip-path: polygon(90% 50%, 10% 50%, 10% 100%, 90% 100%);
 }
 
-.slider img{
+// Slider Image Styles
+.slider img {
     position: absolute;
     top: 0;
     left: 0;
@@ -166,8 +181,12 @@ nav {
     object-fit: cover;
 }
 
+// Media Queries for Responsive Design
+
+// Tablet and Smaller Screens
 @media screen and (width <=1024px) {
 
+    // Responsive Links Container
     .links-container {
         flex-direction: column;
         align-items: flex-start;
@@ -176,10 +195,11 @@ nav {
         right: -100%;
         z-index: 10;
         width: 300px;
-        background-color: var(--color-1);
+        background-color: black;
         transition: 0.75s ease-out;
     }
 
+    // Responsive Navigation Links
     nav a {
         box-sizing: border-box;
         height: auto;
@@ -189,16 +209,19 @@ nav {
         border-bottom: 2px solid goldenrod;
     }
 
+    // Display Sidebar Toggle Buttons
     .open-sidebar-button,
     .close-sidebar-button {
         padding: 20px;
         display: block;
     }
 
+    // Sidebar Active State
     #sidebar-active:checked~.links-container {
         right: 0;
     }
 
+    // Overlay for Sidebar
     #sidebar-active:checked~#overlay {
         height: 100%;
         width: 100%;
@@ -208,38 +231,46 @@ nav {
         z-index: 9;
     }
 
+    // Fullscreen Slide Images
     .slide-images {
         width: 100%;
         height: 100%;
     }
 
+    // Reset Clip Path for Images
     .img-top,
     .img-bottom {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
+    // Reset Hover Effects for Images
     .slide-images:hover .img-top,
     .slide-images:hover .img-bottom {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
+    // Title Text Visibility
     .title h1 {
         opacity: 0;
         font-size: 48px;
     }
 
+    // Active Title Text Visibility
     .active h1 {
         opacity: 1;
     }
 }
 
+// Mobile Screens
 @media screen and (width <=768px) {
 
+    // Fullscreen Slide Images
     .slide-images {
         width: 100vw;
         height: 100%;
     }
 
+    // Smaller Title Text
     .title h1 {
         font-size: 36px;
         border-bottom: 10px solid gold;
@@ -247,21 +278,24 @@ nav {
     
 }
 
-
+// Small Mobile Screens
 @media screen and (width <=425px) {
 
+    // Fullscreen Slide Images
     .slide-images {
         height: 100%;
     }
     
+    // Smaller Title Text
     .title h1 {
         font-size: 28px;
     }
 }
 
-
+// Extra Small Mobile Screens
 @media screen and (width <=375px) {
 
+    // Smallest Title Text
     .title h1 {
         font-size: 24px;
     }

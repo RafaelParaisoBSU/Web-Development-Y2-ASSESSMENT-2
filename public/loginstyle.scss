@@ -1,3 +1,4 @@
+// Global Styles
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,12 +6,14 @@
     transition: all 0.1s ease-in-out;
 }
 
+// Body Styles
 body {
     width: 100vw;
     background: black;
     overflow-x: hidden;
 }
 
+// Custom Scrollbar Styles
 ::-webkit-scrollbar {
     z-index: -6;
     width: 15px;
@@ -30,6 +33,7 @@ body {
     background: darkred;
 }
 
+// Links Container
 .links-container {
     height: 100%;
     width: 100%;
@@ -38,6 +42,7 @@ body {
     align-items: center;
 }
 
+// Navigation Bar
 nav {
     position: sticky;
     top: 0;
@@ -50,12 +55,14 @@ nav {
     align-items: center;
     border-bottom: 2px solid goldenrod;
 
+    // Logo Image
     img {
         width: 120px;
         padding-inline: 20px;
         margin-right: auto;
     }
 
+    // Navigation Links
     a {
         font-size: 24px;
         font-family: 'Bebas Neue';
@@ -68,29 +75,35 @@ nav {
         transition: all 0.3s ease-in-out;
     }
 
+    // Hover Effect for Links
     a:hover {
         background-color: goldenrod;
     }
 
+    // SVG Icons
     svg {
         fill: white;
     }
 
+    // Gallery Link
     .gallery {
         margin-left: auto;
     }
 }
 
+// Sidebar Toggle Checkbox
 #sidebar-active {
     display: none;
 }
 
+// Sidebar Toggle Buttons
 .open-sidebar-button,
 .close-sidebar-button {
     cursor: pointer;
     display: none;
 }
 
+// Sign-in/Log-in Container
 .signlogcontainer {
     width: 100%;
     height: 100%;
@@ -100,10 +113,12 @@ nav {
     object-fit: cover;
 }
 
+// Hidden Elements
 .hidden {
     display: none;
 }
 
+// Sign-in/Log-in Form
 .signlog {
     width: fit-content;
     height: 100%;
@@ -112,11 +127,13 @@ nav {
     font-family: 'Poppins';
     padding: 100px;
 
+    // Paragraph Text
     p {
         text-align: center;
         font-size: 14px;
     }
 
+    // Error Messages
     #signup-error,
     #login-error {
         background-color: red;
@@ -127,6 +144,7 @@ nav {
     }
 }
 
+// Form Container
 .form-container {
     display: flex;
     flex-direction: column;
@@ -134,6 +152,7 @@ nav {
     padding: 100px;
 }
 
+// Form Heading
 h2 {
     text-align: center;
     font-size: 64px;
@@ -142,6 +161,7 @@ h2 {
     border-bottom: 10px solid gold;
 }
 
+// Input Fields
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -151,6 +171,7 @@ input[type="password"] {
     font-size: 16px;
 }
 
+// Submit Button
 .signlog button {
     padding: 10px;
     width: 700px;
@@ -164,21 +185,25 @@ input[type="password"] {
     transition: background-color 0.3s ease;
 }
 
+// Hover Effect for Button
 .signlog button:hover {
     background-color: darkgoldenrod;
 }
 
+// Footer Styles
 .footer {
     background-color: black;
     border-top: 10px solid gold;
     color: #e8eaed;
     text-align: center;
 
+    // Footer Logo
     img {
         margin-top: 50px;
         width: 250px;
     }
 
+    // Footer Text
     p {
         font-family: 'Poppins';
         font-size: 16px;
@@ -186,14 +211,17 @@ input[type="password"] {
     }
 }
 
+// Footer Content
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+// Footer Links
 .footer-links {
     margin: 50px;
 
+    // Link Styles
     a {
         color: #e8eaed;
         font-family: 'Bebas Neue';
@@ -203,15 +231,19 @@ input[type="password"] {
         transition: all 0.2s ease-in-out;
     }
 
+    // Hover Effect for Links
     a:hover {
         text-decoration: underline;
         color: gold;
     }
 }
 
+// Media Queries for Responsive Design
 
+// Tablet and Smaller Screens
 @media screen and (width <=1024px) {
 
+    // Responsive Links Container
     .links-container {
         flex-direction: column;
         align-items: flex-start;
@@ -224,6 +256,7 @@ input[type="password"] {
         transition: 0.75s ease-out;
     }
 
+    // Responsive Navigation Links
     nav a {
         box-sizing: border-box;
         height: auto;
@@ -233,16 +266,19 @@ input[type="password"] {
         border-bottom: 2px solid goldenrod;
     }
 
+    // Display Sidebar Toggle Buttons
     .open-sidebar-button,
     .close-sidebar-button {
         padding: 20px;
         display: block;
     }
 
+    // Sidebar Active State
     #sidebar-active:checked~.links-container {
         right: 0;
     }
 
+    // Overlay for Sidebar
     #sidebar-active:checked~#overlay {
         height: 100%;
         width: 100%;
@@ -252,14 +288,17 @@ input[type="password"] {
         z-index: 9;
     }
 
+    // Responsive Sign-in/Log-in Form
     .signlog {
         width: 100%;
     }
 
+    // Responsive Form Container
     .form-container {
         padding: 50px;
     }
 
+    // Responsive Input Fields
     input[type="text"],
     input[type="email"],
     input[type="password"] {
@@ -267,10 +306,12 @@ input[type="password"] {
         width: 500px;
     }
 
+    // Responsive Submit Button
     .signlog button {
         width: 500px;
     }
 
+    // Responsive Footer
     .footer {
 
         img {
@@ -282,6 +323,7 @@ input[type="password"] {
         }
     }
 
+    // Responsive Footer Links
     .footer-links {
         a {
             font-size: 24px;
@@ -290,8 +332,10 @@ input[type="password"] {
 
 }
 
+// Mobile Screens
 @media screen and (width <=768px) {
 
+    // Mobile Footer
     .footer {
         img {
             width: 150px;
@@ -302,6 +346,7 @@ input[type="password"] {
         }
     }
 
+    // Mobile Footer Links
     .footer-links {
         a {
             font-size: 16px;
@@ -310,7 +355,9 @@ input[type="password"] {
     }
 }
 
+// Small Mobile Screens
 @media screen and (width <=425px) {
+    // Small Mobile Form Container
     .form-container {
         padding: 20px;
 
@@ -319,16 +366,19 @@ input[type="password"] {
         }
     }
 
+    // Small Mobile Input Fields
     input[type="text"],
     input[type="email"],
     input[type="password"] {
         width: 200px;
     }
 
+    // Small Mobile Submit Button
     .signlog button {
         width: 200px;
     }
 
+    // Small Mobile Footer
     .footer {
         img {
             width: 150px;
@@ -339,6 +389,7 @@ input[type="password"] {
         }
     }
 
+    // Small Mobile Footer Links
     .footer-links {
         a {
             font-size: 24px;
@@ -346,7 +397,9 @@ input[type="password"] {
     }
 }
 
+// Extra Small Mobile Screens
 @media screen and (width <=375px) {
+    // Extra Small Mobile Form Container
     .form-container {
         padding: 15px;
 
@@ -355,6 +408,7 @@ input[type="password"] {
         }
     }
 
+    // Extra Small Mobile Footer
     .footer {
         img {
             width: 150px;
@@ -365,6 +419,7 @@ input[type="password"] {
         }
     }
 
+    // Extra Small Mobile Footer Links
     .footer-links {
         a {
             font-size: 16px;

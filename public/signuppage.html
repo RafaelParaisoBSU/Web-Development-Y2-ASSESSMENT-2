@@ -22,10 +22,12 @@
 </head>
 
 <body>
+    <!-- Navigation bar with logo and links -->
     <nav>
-        <img src="./assets/logo.png" alt="">
+        <img src="./assets/logo.png" alt="National Geographic Logo">
         <input type="checkbox" id="sidebar-active">
         <label for="sidebar-active" class="open-sidebar-button">
+            <!-- SVG icon for opening sidebar -->
             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
             </svg>
@@ -34,12 +36,14 @@
         <label id="overlay" for="sidebar-active"></label>
         <div class="links-container">
             <label for="sidebar-active" class="close-sidebar-button">
+                <!-- SVG icon for closing sidebar -->
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
                     fill="#e8eaed">
                     <path
                         d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                 </svg>
             </label>
+            <!-- Navigation links -->
             <a href="./index.html">Home</a>
             <a href="./signuppage.html">Sign Up</a>
             <a href="./gallery.html" class="gallery">Gallery</a>
@@ -50,8 +54,11 @@
             <a href="./index.html#travel">Travel</a>
         </div>
     </nav>
+
+    <!-- Container for signup and login forms -->
     <div class="signlogcontainer">
         <section class="signlog">
+            <!-- Signup form -->
             <div id="signup" class="page">
                 <div class="form-container">
                     <h2>Sign Up</h2>
@@ -62,6 +69,7 @@
                     <p id="signup-error" style="display: none;">Please fill in all fields.</p>
                 </div>
             </div>
+            <!-- Login form -->
             <div id="login" class="page hidden">
                 <div class="form-container">
                     <h2>Login</h2>
@@ -73,9 +81,11 @@
             </div>
         </section>
     </div>
+
+    <!-- Footer with links and copyright -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="./assets/logo.png" alt="">
+            <img src="./assets/logo.png" alt="National Geographic Logo">
             <div class="footer-links">
                 <a href="./index.html">Home</a>
                 <a href="./signuppage.html">Sign Up</a>
@@ -89,8 +99,9 @@
             <p>&copy; 2025 National Geographic. All rights reserved.</p>
         </div>
     </footer>
+
     <script>
-        // Signup Functionality
+        // Signup functionality
         document.getElementById('signup-btn').addEventListener('click', async () => {
             const name = document.getElementById('signup-name').value.trim();
             const email = document.getElementById('signup-email').value.trim();
@@ -131,7 +142,7 @@
             }
         });
 
-        // Login Functionality
+        // Login functionality
         document.getElementById('login-btn').addEventListener('click', async () => {
             const email = document.getElementById('login-email').value.trim();
             const password = document.getElementById('login-password').value.trim();
@@ -169,6 +180,7 @@
             }
         });
     </script>
+    <!-- External scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="./local.js"></script>
     <script src="./script.js"></script>

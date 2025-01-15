@@ -1,3 +1,4 @@
+// Global Styles
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,12 +6,14 @@
     transition: all 0.1s ease-in-out;
 }
 
+// Body Styles
 body {
     width: 100vw;
     background: black;
     overflow-x: hidden;
 }
 
+// Custom Scrollbar Styles
 ::-webkit-scrollbar {
     z-index: -6;
     width: 15px;
@@ -30,6 +33,7 @@ body {
     background: darkred;
 }
 
+// Links Container
 .links-container {
     height: 100%;
     width: 100%;
@@ -38,6 +42,7 @@ body {
     align-items: center;
 }
 
+// Navigation Bar
 nav {
     position: sticky;
     top: 0;
@@ -49,12 +54,14 @@ nav {
     align-items: center;
     border-bottom: 2px solid goldenrod;
 
+    // Logo Image
     img {
         width: 120px;
         padding-inline: 20px;
         margin-right: auto;
     }
 
+    // Navigation Links
     a {
         font-size: 24px;
         font-family: 'Bebas Neue';
@@ -67,30 +74,35 @@ nav {
         transition: all 0.3s ease-in-out;
     }
 
+    // Hover Effect for Links
     a:hover {
         background-color: goldenrod;
     }
 
+    // SVG Icons
     svg {
         fill: white;
     }
 
+    // Gallery Link
     .gallery {
         margin-left: auto;
     }
 }
 
+// Sidebar Toggle Checkbox
 #sidebar-active {
     display: none;
 }
 
+// Sidebar Toggle Buttons
 .open-sidebar-button,
 .close-sidebar-button {
     cursor: pointer;
     display: none;
 }
 
-
+// Home Section
 #home {
     width: 100vw;
     height: 100vh;
@@ -101,6 +113,7 @@ nav {
     object-fit: cover;
 }
 
+// Home Content
 .homecontent {
     display: grid;
     text-align: center;
@@ -127,7 +140,6 @@ nav {
         font-family: 'Poppins';
         text-shadow: -2px 0px 2px #000000;
         text-align: justify;
-
     }
 
     button {
@@ -143,12 +155,14 @@ nav {
     }
 }
 
+// Animals Section
 #animals {
     width: 100%;
     height: 100%;
     margin: 0 auto;
 }
 
+// Animals Content
 .animalscontent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -171,7 +185,6 @@ nav {
     img:hover {
         transform: scale(1.02);
         filter: blur(0px);
-
     }
 
     .animalstext {
@@ -191,12 +204,14 @@ nav {
     }
 }
 
+// Environment Section
 #environment {
     width: 100vw;
     padding: 100px;
     margin: 0% auto;
 }
 
+// Environment Text
 .environmenttext {
     color: white;
     font-family: 'Poppins';
@@ -215,6 +230,7 @@ nav {
     }
 }
 
+// Environment Articles
 .envarticles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -223,7 +239,6 @@ nav {
     color: white;
     font-family: 'Poppins';
     gap: 20px;
-
 
     img {
         width: 100%;
@@ -245,6 +260,7 @@ nav {
     }
 }
 
+// Article Text
 .articletext {
     display: grid;
     flex-direction: column;
@@ -265,6 +281,7 @@ nav {
     }
 }
 
+// Environment Article 1
 .envarticle1 {
     grid-row: span 2;
     grid-column: span 2;
@@ -296,37 +313,18 @@ nav {
     }
 }
 
-
-.envarticle2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.envarticle3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.envarticle4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.envarticle5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
+// Environment Articles 2 to 6
+.envarticle2,
+.envarticle3,
+.envarticle4,
+.envarticle5,
 .envarticle6 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+// History and Culture Section
 #history-culture {
     padding: 50px 100px;
     color: white;
@@ -338,7 +336,6 @@ nav {
         border-bottom: 10px solid gold;
         margin-bottom: 20px;
         text-align: center;
-
     }
 
     p {
@@ -348,6 +345,7 @@ nav {
     }
 }
 
+// History Slider Container
 .hcontainer {
     position: relative;
     height: 100vh;
@@ -363,6 +361,7 @@ nav {
     }
 }
 
+// History Slider
 .historyslider {
     position: relative;
     width: 100%;
@@ -371,6 +370,7 @@ nav {
     overflow: hidden;
 }
 
+// History Slide
 .hslide {
     width: 25%;
     height: 100%;
@@ -380,6 +380,7 @@ nav {
     transition: width 0.4s ease;
 }
 
+// Individual History Slides
 .hslide:nth-child(1) {
     background: url('./assets/history1.avif');
     background-size: cover;
@@ -415,16 +416,19 @@ nav {
     background-position: left;
 }
 
+// Hover Effect for History Slides
 .hslide:hover {
     width: 70%;
 }
 
+// Science Section
 #science {
     width: 100vw;
     padding: 100px;
     margin: 0% auto;
 }
 
+// Science Text
 .sciencetext {
     color: white;
     font-family: 'Poppins';
@@ -443,12 +447,14 @@ nav {
     }
 }
 
+// Science Videos
 .scivids {
     position: relative;
     width: 100%;
     height: 100vh;
 }
 
+// Video Slider
 #vidslider {
     position: absolute;
     top: 0;
@@ -458,6 +464,7 @@ nav {
     object-fit: cover;
 }
 
+// Science Navigation
 .scivids .scinav {
     position: absolute;
     bottom: 40px;
@@ -492,7 +499,7 @@ nav {
     }
 }
 
-
+// Travel Section
 #travel {
     padding: 100px 100px;
     color: white;
@@ -504,7 +511,6 @@ nav {
         border-bottom: 10px solid gold;
         margin-bottom: 20px;
         text-align: center;
-
     }
 
     p {
@@ -514,6 +520,7 @@ nav {
     }
 }
 
+// Travel Grid
 .travelgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -521,7 +528,6 @@ nav {
     margin: 50px auto;
     gap: 20px;
     overflow: hidden;
-
 
     img {
         width: 100%;
@@ -536,6 +542,7 @@ nav {
     }
 }
 
+// Travel Card
 .travcard {
     position: relative;
     display: inline-block;
@@ -568,6 +575,7 @@ nav {
     }
 }
 
+// Footer Styles
 .footer {
     background-color: black;
     border-top: 10px solid gold;
@@ -586,11 +594,13 @@ nav {
     }
 }
 
+// Footer Content
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+// Footer Links
 .footer-links {
     margin: 50px;
 
@@ -609,9 +619,12 @@ nav {
     }
 }
 
+// Media Queries for Responsive Design
 
+// Tablet and Smaller Screens
 @media screen and (width <=1024px) {
 
+    // Responsive Links Container
     .links-container {
         flex-direction: column;
         align-items: flex-start;
@@ -624,6 +637,7 @@ nav {
         transition: 0.75s ease-out;
     }
 
+    // Responsive Navigation Links
     nav a {
         box-sizing: border-box;
         height: auto;
@@ -633,16 +647,19 @@ nav {
         border-bottom: 2px solid goldenrod;
     }
 
+    // Display Sidebar Toggle Buttons
     .open-sidebar-button,
     .close-sidebar-button {
         padding: 20px;
         display: block;
     }
 
+    // Sidebar Active State
     #sidebar-active:checked~.links-container {
         right: 0;
     }
 
+    // Overlay for Sidebar
     #sidebar-active:checked~#overlay {
         height: 100%;
         width: 100%;
@@ -652,6 +669,7 @@ nav {
         z-index: 9;
     }
 
+    // Responsive Home Content
     .homecontent {
         width: 800px;
         margin: 20% auto;
@@ -672,6 +690,7 @@ nav {
         }
     }
 
+    // Responsive Animals Content
     .animalscontent {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(1, 1fr);
@@ -694,10 +713,10 @@ nav {
             p {
                 font-size: 32px;
             }
-
         }
     }
 
+    // Responsive Environment Section
     #environment {
         padding: 50px;
     }
@@ -722,17 +741,16 @@ nav {
     }
 
     .articletext {
-
         h2 {
             font-size: 16px;
         }
 
         h1 {
             font-size: 32px;
-
         }
     }
 
+    // Responsive History and Culture Section
     #history-culture {
         padding: 50px;
 
@@ -749,6 +767,7 @@ nav {
         width: 100%;
     }
 
+    // Responsive Science Section
     #science {
         padding: 50px;
     }
@@ -765,7 +784,6 @@ nav {
 
     .scivids .scinav {
         li {
-
             img {
                 width: 150px;
                 transition: 0.5s;
@@ -777,6 +795,7 @@ nav {
         }
     }
 
+    // Responsive Travel Section
     #travel {
         padding: 50px;
 
@@ -803,8 +822,8 @@ nav {
         display: none;
     }
 
+    // Responsive Footer
     .footer {
-
         img {
             width: 200px;
         }
@@ -818,12 +837,13 @@ nav {
         a {
             font-size: 24px;
         }
-    
     }
 }
 
+// Mobile Screens
 @media screen and (width <=768px) {
 
+    // Mobile Home Section
     #home {
         width: 100vw;
         height: 100vh;
@@ -855,8 +875,8 @@ nav {
         }
     }
 
+    // Mobile Animals Content
     .animalscontent {
-
         .animalstext {
             h1 {
                 font-size: 64px;
@@ -868,12 +888,12 @@ nav {
         }
     }
 
+    // Mobile Environment Section
     #environment {
         padding: 50px;
     }
 
     .environmenttext {
-
         h1 {
             font-size: 64px;
         }
@@ -883,6 +903,7 @@ nav {
         }
     }
 
+    // Mobile History and Culture Section
     #history-culture {
         padding: 50px;
 
@@ -895,6 +916,7 @@ nav {
         }
     }
 
+    // Mobile Science Section
     #science {
         padding: 50px;
     }
@@ -911,7 +933,6 @@ nav {
 
     .scivids .scinav {
         li {
-
             img {
                 width: 100px;
                 transition: 0.5s;
@@ -923,6 +944,7 @@ nav {
         }
     }
 
+    // Mobile Travel Section
     .travelgrid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
@@ -932,6 +954,7 @@ nav {
         display: none;
     }
 
+    // Mobile Footer
     .footer {
         img {
             width: 150px;
@@ -946,12 +969,13 @@ nav {
         a {
             font-size: 16px;
         }
-    
     }
 }
 
+// Small Mobile Screens
 @media screen and (width <=425px) {
 
+    // Small Mobile Home Content
     .homecontent {
         width: 90vw;
         margin: 20vh auto;
@@ -974,7 +998,7 @@ nav {
         }
     }
 
-
+    // Small Mobile Animals Content
     .animalscontent {
         padding: 20px;
         .animalstext {
@@ -990,6 +1014,7 @@ nav {
         }
     }
 
+    // Small Mobile Environment Section
     #environment {
         width: 100vw;
         padding: 20px;
@@ -1036,7 +1061,7 @@ nav {
         }
     }
     
-
+    // Small Mobile History and Culture Section
     #history-culture {
         padding: 20px;
         margin: 50px 0px;
@@ -1061,6 +1086,7 @@ nav {
         height: 100%;
     }
 
+    // Small Mobile Science Section
     #science {
         padding: 20px;
     }
@@ -1083,7 +1109,6 @@ nav {
 
     .scivids .scinav {
         li {
-
             img {
                 width: 50px;
             }
@@ -1094,6 +1119,7 @@ nav {
         }
     }
 
+    // Small Mobile Travel Section
     #travel {
         margin: 50px 0px;
         padding: 20px;
@@ -1126,6 +1152,7 @@ nav {
         display: none;
     }
 
+    // Small Mobile Footer
     .footer {
         img {
             width: 200px;
@@ -1143,8 +1170,10 @@ nav {
     }
 }
 
+// Extra Small Mobile Screens
 @media screen and (width <=375px) {
 
+    // Extra Small Mobile Home Content
     .homecontent {
         width: 90vw;
         margin: 20vh auto;
@@ -1167,7 +1196,7 @@ nav {
         }
     }
 
-
+    // Extra Small Mobile Animals Content
     .animalscontent {
         padding: 1ch;
 
@@ -1182,6 +1211,7 @@ nav {
         }
     }
 
+    // Extra Small Mobile Environment Section
     #environment {
         padding: 10px;
     }
@@ -1227,7 +1257,7 @@ nav {
         }
     }
     
-
+    // Extra Small Mobile History and Culture Section
     #history-culture {
         padding: 10px;
         margin: 25px 0px;
@@ -1250,6 +1280,7 @@ nav {
         margin: 25px 0px;
     }
 
+    // Extra Small Mobile Science Section
     #science {
         padding: 10px;
     }
@@ -1272,7 +1303,6 @@ nav {
 
     .scivids .scinav {
         li {
-
             img {
                 width: 40px;
             }
@@ -1283,6 +1313,7 @@ nav {
         }
     }
 
+    // Extra Small Mobile Travel Section
     #travel {
         margin: 25px 0px;
         padding: 10px;
@@ -1306,9 +1337,9 @@ nav {
         h3 {
             font-size: 36px;
         }
-
     }
 
+    // Extra Small Mobile Footer
     .footer {
         img {
             width: 150px;

@@ -273,30 +273,10 @@ nav .gallery {
   font-family: "League Spartan";
 }
 
-.envarticle2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.envarticle3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.envarticle4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.envarticle5 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
+.envarticle2,
+.envarticle3,
+.envarticle4,
+.envarticle5,
 .envarticle6 {
   display: flex;
   flex-direction: column;
